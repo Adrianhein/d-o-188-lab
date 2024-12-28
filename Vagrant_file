@@ -215,3 +215,9 @@ unqualified-search-registries = ["registry.access.redhat.com", "registry.redhat.
 short-name-mode = "enforcing"
 [root@registry ~]#
 
+
+
+
+
+wget https://github.com/mylab947/d-o-188-lab/blob/main/registries.conf
+
