@@ -221,3 +221,12 @@ short-name-mode = "enforcing"
 
 wget https://github.com/mylab947/d-o-188-lab/blob/main/registries.conf
 
+
+
+
+mv -Z /root/container-registry.service /etc/systemd/system/private-registry.service ; systemctl daemon-rel
+oad ; systemctl enable private-registry.service ; systemctl start private-registry.service
+
+
+
+
