@@ -1,0 +1,6 @@
+#How to verify container registry login 
+#podman login <URL> --get-login
+
+podman login registry.access.redhat.com --get-login
+podman login registry.redhat.io --get-login
+podman login quay.io --get-login
