@@ -1,0 +1,7 @@
+
+# 1. search and pull the container image
+# 2. run the container 
+# 3. make and edit as your own custom data inside the running container
+# 4. commit the running container id to localhost
+# 5. run the conatiner image that commited locally with customised container
+# 6. verify the running container 
