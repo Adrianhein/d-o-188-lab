@@ -14,11 +14,7 @@ CONTAINER ID  IMAGE                           COMMAND           CREATED        S
 ==========================================================================================================================
 
 
-
-
-
-
-Rootless Container do not bind with special ports such - 3306 , 80, 443, 8080, 9090, etc.
+Rootless Container cannot bind with special ports such - 3306 , 80, 443, etc.
 Rootless Container
 ==========================================================================================================================
 [admin@rhel8lab ~]$ podman run -d --name httpd-rootless docker.io/library/httpd 
