@@ -1,5 +1,19 @@
 
 #podman search <image_registry>
+#podman pull <image_registry>
 
+###Searching image from container registries
 podman search httpd
+
+###Pulling image from container registries
+podman pull httpd
+
+###Running podman container 
+podman run -d --name <container name> httpd:latest
+
+###executing with bash inside the container
+podman exec -it <container name> bash
+
+
+
 
