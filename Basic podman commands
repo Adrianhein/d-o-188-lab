@@ -14,6 +14,32 @@ podman run -d --name <container name> httpd:latest
 ###executing with bash inside the container
 podman exec -it <container name> bash
 
+###View containers which running state only
+podman ps
+
+###View containers at all states
+podman ps -a
+
+###View containers images which pulled from containers registries
+podman images
+
+###Stop containers
+podman stop <container name>
+
+###Delete containers  
+podman rm -f <container name>
+
+###Delete containers images
+podman rmi -f <container image>
+
+###Inspecting containers 
+podman inspect <CONTAINER ID> | grep -i "IPAddress"
+podman inspect <CONTAINER ID> | grep -i "Hostname"
+
+###Logs
+podman logs -f <CONTAINER ID>
+
+
 
 
 
