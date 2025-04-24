@@ -1,1 +1,29 @@
 
+Root Container
+==========================================================================================================================
+[root@rhel8lab ~]# podman run -d --name httpd-root docker.io/library/httpd
+223b5d2177d6d15249f8eb862ed0eaafb9c113dfdd3bd8314d3279ef46365ebb
+[root@rhel8lab ~]# podman ps -l
+CONTAINER ID  IMAGE                           COMMAND           CREATED        STATUS            PORTS       NAMES
+223b5d2177d6  docker.io/library/httpd:latest  httpd-foreground  5 seconds ago  Up 5 seconds ago              httpd-root
+[root@rhel8lab ~]#  podman inspect -l | grep -i IPAddress
+               "IPAddress": "10.88.0.3",
+                         "IPAddress": "10.88.0.3",
+[root@rhel8lab ~]#
+[root@rhel8lab ~]#
+==========================================================================================================================
+
+
+
+Rootless Container
+==========================================================================================================================
+[admin@rhel8lab ~]$ podman run -d --name httpd-rootless docker.io/library/httpd 
+67e511332a395d4a2ccb756ffd341e2975a463cb040c6ff9d099c7e391626bab
+[admin@rhel8lab ~]$ podman ps -l
+CONTAINER ID  IMAGE                           COMMAND           CREATED        STATUS            PORTS       NAMES
+67e511332a39  docker.io/library/httpd:latest  httpd-foreground  4 seconds ago  Up 5 seconds ago              httpd-rootless
+[admin@rhel8lab ~]$ podman inspect -l | grep -i IPAddress
+               "IPAddress": "",
+[admin@rhel8lab ~]$ 
+[admin@rhel8lab ~]$ 
+==========================================================================================================================
