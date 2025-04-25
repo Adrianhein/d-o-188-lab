@@ -1,7 +1,21 @@
 
 # 1. search and pull the container image
-# 2. run the container 
+podman search busybox
+podman pull docker.io/library/busybox
+
+# 2. run the container with detached mode
+podman run -d --name mybusybox docker.io/library/busybox:latest sh -c "sleep infinitely"
+##>>> if the container is system container, use like that    sh -c "sleep infinitely" 
+
 # 3. make and edit as your own custom data inside the running container
+podman exec <CONTAINER NAME> <COMMAND> 
+podman exec mybusybox mkdir /var/logs/
+podman exec mybusybox touch /var/logs/mybusybox.log
+
 # 4. commit the running container id to localhost
+podman commit <CONTAINER ID> localhost/<name of the image>:<tag name>
+podman commit mybusybox localhost/busybox:latest-logs
+
 # 5. run the conatiner image that commited locally with customised container
+
 # 6. verify the running container 
