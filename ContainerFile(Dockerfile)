@@ -1,0 +1,29 @@
+#Docker image can also be ran with Podman 
+#Containerfiles start with "FROM" instruction
+#Instruction execute from top to bottom
+#Every instruction step builds new layer 
+
+FROM
+RUN
+
+ADD  = transfer files from URL, host, uncompressing tar into image
+COPY = transfer files only from host system to image
+
+WORKDIR = 
+USER    = 
+
+CMD
+ENTRYPOINT
+
+ENV
+VOLUME
+
+EXPOSE
+LABEL
+
+ARG
+
+
+
+
+
