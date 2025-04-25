@@ -12,16 +12,16 @@ COPY = transfer files only from host system to image
 WORKDIR = 
 USER    = 
 
-CMD
-ENTRYPOINT
+CMD         = defines default command that will run as soon as the container start
+ENTRYPOINT  = defines default command or entry point, commonly configured as shell inside the container
 
-ENV
-VOLUME
+ENV    = environment variable is to pass such as database container requires its user name, database name, database password, etc.
+VOLUME = storage location that created as custom location outside of the container with persistent storage
 
-EXPOSE
-LABEL
+EXPOSE = 
+LABEL  = 
 
-ARG
+ARG = 
 
 
 
