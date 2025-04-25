@@ -14,3 +14,8 @@ podman save -o $(pwd)/wordpress_latest.tar docker.io/library/wordpress:latest
 podman load -i /directory/<name_of_image>.tar
 podman load -i $(pwd)/wordpress_latest.tar
 
+
+#Verify with podman images
+podman images
+podman images -a
+
