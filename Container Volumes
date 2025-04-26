@@ -27,7 +27,9 @@ podman run -d --name test-container -p 8080:80 -v $HOME/test:/var/www/html:Z htt
 #podman volume is managed by podman 
 #benefit of podman volume is that can be used with multiple write operations
 
-
+podman volume create <volume name>
+podman volume ls
+podman volume --help
 
 
 
