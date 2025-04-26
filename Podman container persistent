@@ -1,0 +1,7 @@
+#Creating systemd service for podman container to make sure persistent even if host system is rebooted.
+
+
+
+
+
+
