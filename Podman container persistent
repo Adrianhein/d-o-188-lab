@@ -1,5 +1,50 @@
 #Creating systemd service for podman container to make sure persistent even if host system is rebooted.
 
+#Before creating systemd service, check with manu
+podman generate --help
+man podman generate
+podman generate systemd --help
+man podman-generate-systemd  #view manual page for the systemd creation
+
+
+#Run the container first
+podman pull httpd
+podman run -d --name httpd01 docker.io/library/httpd:latest
+podman ps
+
+#===========================================================================================================================
+####Demostration how to create systemd service as non-root user below:
+
+mkdir -p ~/.config/systemd/user
+cd ~/.config/systemd/user
+podman generate systemd httpd01 -n --files
+systemctl --user daemon-reload 
+systemctl --user enable container-httpd01.service 
+systemctl --user start container-httpd01.service 
+systemctl --user status container-httpd01.service 
+podman ps
+
+
+#===========================================================================================================================
+####Demostration how to create systemd service as root user below:
+
+podman run -d --name httpd-with-root docker.io/library/httpd:latest
+podman ps
+podman generate systemd --new --files --name httpd-with-root
+cp -Z /root/container-httpd-with-root.service /etc/systemd/system/httpd-with-root.service
+ls -lrtZ /etc/systemd/system/httpd-with-root.service
+systemctl daemon-reload && systemctl enable httpd-with-root.service && systemctl start httpd-with-root.service
+systemctl status httpd-with-root.service
+podman ps
+
+#===========================================================================================================================
+
+
+
+
+
+
+
 
 
 
