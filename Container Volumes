@@ -13,6 +13,8 @@ podman exec -it test-container mkdir /test
 #2) Persistent bind mount
 
 =>SElinux labeled
+https://github.com/Adrianhein/d-o-188-lab/blob/main/SELinux%20with%20podman
+
 =>UID permission
 
 :Z and :z in Podman (with SELinux)
