@@ -1,29 +1,25 @@
 #Docker image can also be ran with Podman 
-#Containerfiles start with "FROM" instruction
+#Containerfiles always start with "FROM" instruction
 #Instruction execute from top to bottom
-#Every instruction step builds new layer 
+#Every instruction step builds new layer
+
+#Instructions explaination below:
 
 FROM
-RUN
+RUN    = to execute a command during the container building process and the command output will remain in the final image.
+ENV    = environment variable is to pass such as database container requires its user name, database name, database password, etc.
+VOLUME = storage location that created as custom location outside of the container with persistent storage
+ARG    = defines build-time variables that passed during the image creation time.
 
 ADD  = transfer files from URL, host, uncompressing tar into image
 COPY = transfer files only from host system to image
 
-WORKDIR = 
-USER    = 
+WORKDIR = it's like "mkdir <directory> ; cd $(pwd)/<directory>"
+USER    = specific user only to run the commands for enchancing security purpose.
 
 CMD         = defines default command that will run as soon as the container start
 ENTRYPOINT  = defines default command or entry point, commonly configured as shell inside the container
 
-ENV    = environment variable is to pass such as database container requires its user name, database name, database password, etc.
-VOLUME = storage location that created as custom location outside of the container with persistent storage
-
-EXPOSE = 
-LABEL  = 
-
-ARG = 
-
-
-
-
+EXPOSE = port exporting but this is not actual exposing port just only showing for informational purpose
+LABEL  = assigining metedata to container image with key-value pairs for for informational purpose
 
