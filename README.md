@@ -1,6 +1,7 @@
 # 
 # 
 # d-o-188 note
+# 
 
 1) Verify with podman public container registries login or not.
 
