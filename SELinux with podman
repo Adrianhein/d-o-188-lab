@@ -1,0 +1,19 @@
+#SELinux (Security-Enhanced Linux)  is a powerful security layer built into Linux that uses mandatory access control (MAC) to restrict what users and processes can do — even if the user have root access.
+
+#getenforce                                                              (checking SELinux mode)
+#sestatus                                                                (checking SELinux status)
+#setenforce 0                                                            (temporary disable)
+#ls -Zld /directory                                                      (viewing context)
+
+#semanage fcontext -l                                                    (viewing context file simple inside the system for reference)
+#semanage fcontext -l | grep httpd                                       (viewing context file simple inside the system for reference)
+#semanage fcontext -l | grep container_file                              (viewing context file simple inside the system for reference)
+##semanage fcontext --help
+
+#semanage fcontext -t -a container_file_t "/directory(/.*)?"             (modifying label)
+#restorecon -Rv /directory                                               (Relabelling manually)
+#chcon -Rt svirt_sandbox_file_t /directory                               (Relabelling manually)
+
+
+
+
