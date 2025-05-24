@@ -1,0 +1,12 @@
+
+#Managing Podman containers with Cockpit on Linux
+
+sudo dnf install cockpit -y
+sudo dnf install cockpit-podman -y
+sudo systemctl enable --now cockpit.socket
+
+systemctl status --user podman
+systemctl start --user podman
+systemctl enable --user podman
+systemctl status --user podman
+
