@@ -8,7 +8,9 @@ Sometimes, "podman" command not able to run even if the system already installed
     [admin@r-h-e-l-9-LAB ~]$ 
 
 
-In this case, we'll need to check login session which direct login with specific non-root user that "podman" can porate.
+In this case, we'll need to check login session which direct login with specific non-root user that "podman" can manage containers.
+
+---
 
 This should be runing podman command below
 
