@@ -4,7 +4,7 @@ Sometimes, "podman" command not able to run even if the system already installed
 
     [admin@r-h-e-l-9-LAB ~]$ podman ps 
     WARN[0000] RunRoot is pointing to a path (/run/user/1000/containers) which is not writable. Most likely podman will fail. 
-    Error: default OCI runtime "crun" not found: invalid argument
+    ##########Error: default OCI runtime "crun" not found: invalid argument
     [admin@r-h-e-l-9-LAB ~]$ 
 
 
@@ -24,7 +24,7 @@ This cannot run podman command below
     [admin@r-h-e-l-9-LAB ~]$ 
     [admin@r-h-e-l-9-LAB ~]$ podman ps 
     WARN[0000] RunRoot is pointing to a path (/run/user/1000/containers) which is not writable. Most likely podman will fail. 
-    Error: default OCI runtime "crun" not found: invalid argument
+    ##########Error: default OCI runtime "crun" not found: invalid argument
     [admin@r-h-e-l-9-LAB ~]$ 
     
 ---
