@@ -1,10 +1,36 @@
 # 
 # d-o-188 note
 
- 
 [1) Verify with podman command for public container registries has already login or not.](https://github.com/Adrianhein/d-o-188-lab/blob/main/verify%20container%20registry%20login)
 
+#
+
 [2) Local Container Registry Server SetUp](https://github.com/Adrianhein/d-o-188-lab/blob/main/Tin_ex188_LAB_SETUP_V1.1.pdf)
+#### Update! 
+#### Lab Steup, currently using V1 format for registry server.
+#### We have to use V2 format now.
+#### /etc/containers/registries.conf
+
+    unqualified-search-registries = [
+    "registry.access.redhat.com",
+    "registry.redhat.io",
+    "docker.io"
+    ]
+
+    [[registry]]
+    location = "my-infra-01:5000"
+    insecure = true
+
+#### Should NOT include below block
+
+    [registries.search]
+    registries = ["..."]
+
+    [registries.insecure]
+    registries = ["..."]
+
+
+#
 
 [3) Basic podman container commands and usages](https://github.com/Adrianhein/d-o-188-lab/blob/main/Basic%20podman%20commands)
 
